@@ -1,6 +1,6 @@
 function generateNumber() {
     let lastNumber = parseInt(localStorage.getItem('lastNumber')) || 0; // Retrieve the last number from localStorage or start at 0 if not set
-    let number = Math.floor(Math.random() * (100 - lastNumber)) + lastNumber;
+    let number = Math.floor(Math.random() * (lastNumber)) + lastNumber;
     document.getElementById('display').innerHTML = number;
     localStorage.setItem('lastNumber', number); // Save the new number to localStorage
 }
